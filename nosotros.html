@@ -6,6 +6,9 @@
     <title>Nosotros_Biblioteca iu Digital</title>
 </head>
 <body>
+
+    <div id="contenedor-menu"></div>
+
     <header> 
         <h1>Nosotros</h1>
 
@@ -13,6 +16,13 @@
         
     
     </header>
+    <script>
+        fetch('menuNav.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('contenedor-menu').innerHTML = data;
+            });
+    </script>
 
 </body>
 

@@ -4,6 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Catálogo de Recursos - Biblioteca Universitaria</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+    </style>
 </head>
 <body>
     <div id="contenedor-menu"></div>
@@ -28,81 +43,94 @@
         <section>
             <h2>Resultados del Catálogo</h2>
 
-            <article>
-                <h3>1. Ingeniería de Software: Un enfoque práctico</h3>
-                <p><strong>Autor:</strong> Roger S. Pressman</p>
-                <p><strong>Formato:</strong> Libro Físico</p>
-                <div>
-                    <p><strong>Estado actual:</strong> <span>Disponible</span></p>
-                    <details>
-                        <summary>Ver disponibilidad en inventario</summary>
-                        <ul>
-                            <li>Ejemplares totales: 8</li>
-                            <li>En estante: 5</li>
-                            <li>Prestados: 3</li>
-                        </ul>
-                    </details>
-                </div>
-                <button type="button">Reservar Ejemplar</button>
-            </article>
-            <hr>
+            <table>
+                <thead>
+                    <tr>
+                        <th>N°</th>
+                        <th>Título</th>
+                        <th>Autor</th>
+                        <th>Formato</th>
+                        <th>Estado / Licencia</th>
+                        <th>Acción</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td><strong>Ingeniería de Software: Un enfoque práctico</strong></td>
+                        <td>Roger S. Pressman</td>
+                        <td>Libro Físico</td>
+                        <td>
+                            <span>Disponible</span>
+                            <details>
+                                <summary>Ver inventario</summary>
+                                <ul style="margin: 0; padding-left: 20px;">
+                                    <li>Total: 8</li>
+                                    <li>En estante: 5</li>
+                                    <li>Prestados: 3</li>
+                                </ul>
+                            </details>
+                        </td>
+                        <td><button type="button">Reservar</button></td>
+                    </tr>
 
-            <article>
-                <h3>2. Cálculo Trascendentes Tempranas</h3>
-                <p><strong>Autor:</strong> James Stewart</p>
-                <p><strong>Formato:</strong> Libro Físico</p>
-                <div>
-                    <p><strong>Estado actual:</strong> <span>Agotado temporalmente</span></p>
-                    <details>
-                        <summary>Ver disponibilidad en inventario</summary>
-                        <ul>
-                            <li>Ejemplares totales: 15</li>
-                            <li>En estante: 0</li>
-                            <li>Prestados: 15</li>
-                        </ul>
-                    </details>
-                </div>
-                <button type="button">Ponerse en lista de espera</button>
-            </article>
-            <hr>
+                    <tr>
+                        <td>2</td>
+                        <td><strong>Cálculo Trascendentes Tempranas</strong></td>
+                        <td>James Stewart</td>
+                        <td>Libro Físico</td>
+                        <td>
+                            <span>Agotado temporalmente</span>
+                            <details>
+                                <summary>Ver inventario</summary>
+                                <ul style="margin: 0; padding-left: 20px;">
+                                    <li>Total: 15</li>
+                                    <li>En estante: 0</li>
+                                    <li>Prestados: 15</li>
+                                </ul>
+                            </details>
+                        </td>
+                        <td><button type="button">Lista de espera</button></td>
+                    </tr>
 
-            <article>
-                <h3>3. Inteligencia Artificial: Un Enfoque Moderno</h3>
-                <p><strong>Autor:</strong> Stuart Russell, Peter Norvig</p>
-                <p><strong>Formato:</strong> Licencia Digital</p>
-                <p><strong>Licencia:</strong> <mark>Activa - Ilimitada</mark></p>
-                <p>Acceso disponible para toda la comunidad universitaria.</p>
-                <a href="#">Leer documento en línea</a>
-            </article>
-            <hr>
+                    <tr>
+                        <td>3</td>
+                        <td><strong>Inteligencia Artificial: Un Enfoque Moderno</strong></td>
+                        <td>Stuart Russell, Peter Norvig</td>
+                        <td>Licencia Digital</td>
+                        <td><mark>Activa - Ilimitada</mark></td>
+                        <td><a href="#">Leer en línea</a></td>
+                    </tr>
 
-            <article>
-                <h3>4. Estructuras de Datos y Algoritmos en Java</h3>
-                <p><strong>Autor:</strong> Roberto Tamassia, Michael T. Goodrich</p>
-                <p><strong>Formato:</strong> Libro Físico</p>
-                <div>
-                    <p><strong>Estado actual:</strong> <span>Disponible</span></p>
-                    <details>
-                        <summary>Ver disponibilidad en inventario</summary>
-                        <ul>
-                            <li>Ejemplares totales: 4</li>
-                            <li>En estante: 2</li>
-                            <li>Prestados: 2</li>
-                        </ul>
-                    </details>
-                </div>
-                <button type="button">Reservar Ejemplar</button>
-            </article>
-            <hr>
+                    <tr>
+                        <td>4</td>
+                        <td><strong>Estructuras de Datos y Algoritmos en Java</strong></td>
+                        <td>Roberto Tamassia, Michael T. Goodrich</td>
+                        <td>Libro Físico</td>
+                        <td>
+                            <span>Disponible</span>
+                            <details>
+                                <summary>Ver inventario</summary>
+                                <ul style="margin: 0; padding-left: 20px;">
+                                    <li>Total: 4</li>
+                                    <li>En estante: 2</li>
+                                    <li>Prestados: 2</li>
+                                </ul>
+                            </details>
+                        </td>
+                        <td><button type="button">Reservar</button></td>
+                    </tr>
 
-            <article>
-                <h3>5. Revista Nature - Edición Mayo 2026</h3>
-                <p><strong>Autor:</strong> Editorial Nature</p>
-                <p><strong>Formato:</strong> Revista Digital</p>
-                <p><strong>Licencia:</strong> <mark>Activa - Acceso Institucional</mark></p>
-                <p>Acceso disponible exclusivo para Facultad de Ciencias.</p>
-                <a href="#">Leer documento en línea</a>
-            </article>
+                    <tr>
+                        <td>5</td>
+                        <td><strong>Revista Nature - Edición Mayo 2026</strong></td>
+                        <td>Editorial Nature</td>
+                        <td>Revista Digital</td>
+                        <td><mark>Activa - Institucional</mark></td>
+                        <td><a href="#">Leer en línea</a></td>
+                    </tr>
+                </tbody>
+            </table>
         </section>
     </main>
 
