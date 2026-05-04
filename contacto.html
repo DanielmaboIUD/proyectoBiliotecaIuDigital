@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Biblioteca Universitaria</title>
+</head>
+<body>
+
+    <div id="contenedor-menu"></div>
+
+    <main>
+        <section>
+            <h2>Ponte en contacto con nosotros</h2>
+            <p>¿Tienes dudas sobre tus multas pendientes o el acceso a licencias digitales? Escríbenos.</p>
+            
+            <address>
+                <p><strong>Ubicación:</strong> Bloque L, Segundo Piso - Campus Central</p>
+                <p><strong>Teléfono:</strong> (604) 123-4567</p>
+                <p><strong>Email:</strong> <a href="mailto:biblioteca@universidad.edu">biblioteca@universidad.edu</a></p>
+            </address>
+        </section>
+
+        <section>
+            <h2>Formulario de Soporte</h2>
+            <form action="#" method="post">
+                <fieldset>
+                    <legend>Información Personal</legend>
+                    <label for="nombre">Nombre Completo:</label>
+                    <input type="text" id="nombre" name="nombre" required>
+
+                    <label for="correo">Correo Institucional:</label>
+                    <input type="email" id="correo" name="correo" required>
+
+                    <label for="rol">Tipo de usuario:</label>
+                    <select id="rol" name="rol">
+                        <option value="estudiante">Estudiante</option>
+                        <option value="profesor">Profesor</option>
+                        <option value="administrativo">Administrativo</option>
+                    </select>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Motivo de Consulta</legend>
+                    <label for="asunto">Asunto:</label>
+                    <select id="asunto" name="asunto">
+                        <option value="multas">Dudas sobre Multas</option>
+                        <option value="licencias">Problemas con Licencias Digitales</option>
+                        <option value="prestamos">Información de Préstamos</option>
+                        <option value="otro">Otro motivo</option>
+                    </select>
+
+                    <label for="mensaje">Mensaje detallado:</label><br>
+                    <textarea id="mensaje" name="mensaje" rows="6" cols="40" placeholder="Escribe aquí tu solicitud..."></textarea>
+                </fieldset>
+
+                <button type="submit">Enviar consulta</button>
+                <button type="reset">Limpiar formulario</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Biblioteca Universitaria - Atención al Usuario</p>
+    </footer>
+    <script>
+        fetch('menuNav.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('contenedor-menu').innerHTML = data;
+            });
+    </script>
+</body>
+</html>

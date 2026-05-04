@@ -1,0 +1,34 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblioteca iu Digital</title>
+</head>
+<body>
+    <header> 
+        <h1>Biblioteca Digital</h1>
+
+        <p> Bienvenidos al portal de la biblioteca institucional de la iu digital de antioquia</p>
+
+        <div id="contenedor-menu"></div>
+
+    </header>
+
+    <footer>
+        Realizado por Oscar Osorio y Daniel Marin Botero
+    </footer>
+    <script>
+        fetch('menuNav.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('contenedor-menu').innerHTML = data;
+            });
+    </script>
+</body>
+
+</html>
+
+
+

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Recursos - Biblioteca Universitaria</title>
+</head>
+<body>
+    <div id="contenedor-menu"></div>
+
+    <main>
+        <section>
+            <h2>Buscador de Recursos</h2>
+            <form role="search">
+                <label for="busqueda">Buscar por título, autor o ISBN:</label>
+                <input type="search" id="busqueda" name="q" placeholder="Ej: Cálculo de Stewart">
+                
+                <label for="filtro-tipo">Tipo de recurso:</label>
+                <select id="filtro-tipo">
+                    <option value="todos">Todos</option>
+                    <option value="fisico">Libro Físico</option>
+                    <option value="digital">Licencia Digital</option>
+                </select>
+                <button type="submit">Buscar</button>
+            </form>
+        </section>
+
+        <section>
+            <h2>Resultados del Catálogo</h2>
+
+            <article>
+                <h3>1. Ingeniería de Software: Un enfoque práctico</h3>
+                <p><strong>Autor:</strong> Roger S. Pressman</p>
+                <p><strong>Formato:</strong> Libro Físico</p>
+                <div>
+                    <p><strong>Estado actual:</strong> <span>Disponible</span></p>
+                    <details>
+                        <summary>Ver disponibilidad en inventario</summary>
+                        <ul>
+                            <li>Ejemplares totales: 8</li>
+                            <li>En estante: 5</li>
+                            <li>Prestados: 3</li>
+                        </ul>
+                    </details>
+                </div>
+                <button type="button">Reservar Ejemplar</button>
+            </article>
+            <hr>
+
+            <article>
+                <h3>2. Cálculo Trascendentes Tempranas</h3>
+                <p><strong>Autor:</strong> James Stewart</p>
+                <p><strong>Formato:</strong> Libro Físico</p>
+                <div>
+                    <p><strong>Estado actual:</strong> <span>Agotado temporalmente</span></p>
+                    <details>
+                        <summary>Ver disponibilidad en inventario</summary>
+                        <ul>
+                            <li>Ejemplares totales: 15</li>
+                            <li>En estante: 0</li>
+                            <li>Prestados: 15</li>
+                        </ul>
+                    </details>
+                </div>
+                <button type="button">Ponerse en lista de espera</button>
+            </article>
+            <hr>
+
+            <article>
+                <h3>3. Inteligencia Artificial: Un Enfoque Moderno</h3>
+                <p><strong>Autor:</strong> Stuart Russell, Peter Norvig</p>
+                <p><strong>Formato:</strong> Licencia Digital</p>
+                <p><strong>Licencia:</strong> <mark>Activa - Ilimitada</mark></p>
+                <p>Acceso disponible para toda la comunidad universitaria.</p>
+                <a href="#">Leer documento en línea</a>
+            </article>
+            <hr>
+
+            <article>
+                <h3>4. Estructuras de Datos y Algoritmos en Java</h3>
+                <p><strong>Autor:</strong> Roberto Tamassia, Michael T. Goodrich</p>
+                <p><strong>Formato:</strong> Libro Físico</p>
+                <div>
+                    <p><strong>Estado actual:</strong> <span>Disponible</span></p>
+                    <details>
+                        <summary>Ver disponibilidad en inventario</summary>
+                        <ul>
+                            <li>Ejemplares totales: 4</li>
+                            <li>En estante: 2</li>
+                            <li>Prestados: 2</li>
+                        </ul>
+                    </details>
+                </div>
+                <button type="button">Reservar Ejemplar</button>
+            </article>
+            <hr>
+
+            <article>
+                <h3>5. Revista Nature - Edición Mayo 2026</h3>
+                <p><strong>Autor:</strong> Editorial Nature</p>
+                <p><strong>Formato:</strong> Revista Digital</p>
+                <p><strong>Licencia:</strong> <mark>Activa - Acceso Institucional</mark></p>
+                <p>Acceso disponible exclusivo para Facultad de Ciencias.</p>
+                <a href="#">Leer documento en línea</a>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Biblioteca Universitaria - Gestión de Recursos Físicos y Digitales</p>
+    </footer>
+
+    <script>
+        fetch('menuNav.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('contenedor-menu').innerHTML = data;
+            });
+    </script>
+</body>
+</html>

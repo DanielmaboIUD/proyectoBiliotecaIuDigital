@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservas_Biblioteca iu Digital</title>
+</head>
+<body>
+
+    <div id="contenedor-menu"></div>
+
+    <header> 
+        <h1>Reservas</h1>
+
+        <p> En este espacio podras reservar los libros digitales</p>
+        
+        <div class="formulario-reserva">
+            <h2> Nueva Reserva</h2>
+            <form id="formReserva">
+                <div class="form-group">
+                    <label for="nombreUsuario">Nombre completo</label>
+                    <input type="text" id="nombreUsuario" required placeholder="Ej: Juan Pérez">
+                </div>
+    </header>
+
+    <script>
+        fetch('menuNav.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('contenedor-menu').innerHTML = data;
+            });
+    </script>
+
+</body>
+
+</html>
