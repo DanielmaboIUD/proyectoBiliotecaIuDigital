@@ -1,0 +1,51 @@
+:root {
+    --azul-primario: #002855;
+    --azul-secundario: #0077b6;
+    --fondo-sitio: #f4f6f9;
+    --blanco: #ffffff;
+    --texto-oscuro: #2c3e50;
+    --fuente-base: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+    font-family: var(--fuente-base);
+    background-color: var(--fondo-sitio);
+    color: var(--texto-oscuro);
+    margin: 0;
+    padding: 0;
+}
+
+/* Contenedor principal de bienvenida */
+body > header {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 40px;
+    background-color: var(--blanco);
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    text-align: center;
+    border-top: 5px solid var(--azul-secundario);
+}
+
+body > header h1 {
+    color: var(--azul-primario);
+    font-size: 2.2rem;
+    margin-top: 0;
+}
+
+body > header p {
+    font-size: 1.2rem;
+    color: #576574;
+    line-height: 1.8;
+}
+
+/* Footer institucional */
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 60px;
+    background-color: var(--azul-primario);
+    color: var(--blanco);
+    font-size: 0.95rem;
+    font-weight: 400;
+}

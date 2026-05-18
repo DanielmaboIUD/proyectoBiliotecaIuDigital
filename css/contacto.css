@@ -1,0 +1,107 @@
+:root {
+    --azul-primario: #002855;
+    --azul-secundario: #0077b6;
+    --fondo-sitio: #f4f6f9;
+    --blanco: #ffffff;
+    --texto-oscuro: #2c3e50;
+    --borde-suave: #dcdde1;
+    --fuente-base: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+    font-family: var(--fuente-base);
+    background-color: var(--fondo-sitio);
+    margin: 0;
+}
+
+main {
+    max-width: 850px;
+    margin: 35px auto;
+    padding: 30px;
+    background-color: var(--blanco);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+h2 {
+    color: var(--azul-primario);
+}
+
+/* Tarjeta de Dirección/Contacto */
+address {
+    background-color: #f1f5f9;
+    padding: 20px;
+    border-radius: 8px;
+    font-style: normal;
+    border-left: 5px solid var(--azul-primario);
+    margin-bottom: 30px;
+}
+
+address p {
+    margin: 8px 0;
+}
+
+address a {
+    color: var(--azul-secundario);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+/* Formularios elegantes */
+fieldset {
+    border: 1px solid var(--borde-suave);
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 25px;
+}
+
+legend {
+    font-weight: bold;
+    color: var(--azul-primario);
+    padding: 0 10px;
+}
+
+label {
+    display: block;
+    margin-top: 12px;
+    font-weight: 500;
+}
+
+input[type="text"], input[type="email"], select, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid var(--borde-suave);
+    border-radius: 6px;
+    box-sizing: border-box;
+}
+
+input:focus, select:focus, textarea:focus {
+    border-color: var(--azul-secundario);
+    outline: none;
+}
+
+button[type="submit"] {
+    background-color: var(--azul-primario);
+    color: var(--blanco);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+button[type="reset"] {
+    background-color: #95a5a6;
+    color: var(--blanco);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #e2e8f0;
+}   

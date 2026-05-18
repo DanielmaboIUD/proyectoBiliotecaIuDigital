@@ -1,0 +1,42 @@
+:root {
+    --azul-primario: #002855;
+    --azul-secundario: #0077b6;
+    --fondo-sitio: #f4f6f9;
+    --blanco: #ffffff;
+    --texto-oscuro: #2c3e50;
+    --fuente-base: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+    font-family: var(--fuente-base);
+    background-color: var(--fondo-sitio);
+    margin: 0;
+}
+
+header {
+    max-width: 800px;
+    margin: 60px auto;
+    padding: 40px;
+    background-color: var(--blanco);
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    border-left: 6px solid var(--azul-primario);
+}
+
+header h1 {
+    color: var(--azul-primario);
+    font-size: 2.5rem;
+    margin-top: 0;
+}
+
+/* El texto de la misión/visión transformado en manifiesto */
+header p {
+    font-size: 1.25rem;
+    color: #4a5568;
+    line-height: 1.9;
+    font-style: italic;
+    position: relative;
+    padding: 10px 20px;
+    background-color: #f8fafc;
+    border-radius: 8px;
+}

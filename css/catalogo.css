@@ -1,0 +1,123 @@
+:root {
+    --azul-primario: #002855;
+    --azul-secundario: #0077b6;
+    --naranja-acento: #e67e22;
+    --fondo-sitio: #f4f6f9;
+    --blanco: #ffffff;
+    --texto-oscuro: #2c3e50;
+    --borde-suave: #dcdde1;
+    --fuente-base: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+    font-family: var(--fuente-base);
+    background-color: var(--fondo-sitio);
+    margin: 0;
+}
+
+main {
+    max-width: 1100px;
+    margin: 35px auto;
+    padding: 25px;
+    background-color: var(--blanco);
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+h2 {
+    color: var(--azul-primario);
+    border-left: 4px solid var(--azul-secundario);
+    padding-left: 10px;
+    margin-top: 30px;
+}
+
+/* Formulario de búsqueda */
+form[role="search"] {
+    background-color: #f8fafc;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid var(--borde-suave);
+    margin-bottom: 25px;
+}
+
+form[role="search"] label {
+    font-weight: 600;
+    margin-right: 10px;
+}
+
+form[role="search"] input, form[role="search"] select {
+    padding: 8px 12px;
+    border: 1px solid var(--borde-suave);
+    border-radius: 6px;
+    margin-right: 15px;
+    outline: none;
+}
+
+form[role="search"] input:focus {
+    border-color: var(--azul-secundario);
+}
+
+/* Botones */
+button {
+    background-color: var(--azul-secundario);
+    color: var(--blanco);
+    border: none;
+    padding: 9px 18px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.2s;
+}
+
+button:hover {
+    background-color: var(--azul-primario);
+}
+
+/* Tabla estructurada */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+th {
+    background-color: var(--azul-primario);
+    color: var(--blanco);
+    padding: 14px;
+    text-align: left;
+}
+
+td {
+    padding: 12px 14px;
+    border-bottom: 1px solid var(--borde-suave);
+}
+
+tr:nth-child(even) {
+    background-color: #fdfdfd;
+}
+
+tr:hover {
+    background-color: #f1f5f9;
+}
+
+mark {
+    background-color: #ffeaa7;
+    color: #d35400;
+    padding: 3px 6px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+details summary {
+    color: var(--azul-secundario);
+    cursor: pointer;
+    margin-top: 5px;
+    font-weight: 500;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #e2e8f0;
+    color: var(--texto-oscuro);
+}

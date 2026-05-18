@@ -1,0 +1,65 @@
+:root {
+    --azul-primario: #002855;
+    --azul-secundario: #0077b6;
+    --fondo-sitio: #f4f6f9;
+    --blanco: #ffffff;
+    --texto-oscuro: #2c3e50;
+    --borde-suave: #dcdde1;
+    --fuente-base: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+    font-family: var(--fuente-base);
+    background-color: var(--fondo-sitio);
+    margin: 0;
+}
+
+/* Contenedor adaptado a la estructura del archivo */
+header {
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: var(--blanco);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+header h1 {
+    color: var(--azul-primario);
+    margin-top: 0;
+}
+
+header p {
+    color: #718096;
+    margin-bottom: 25px;
+}
+
+.formulario-reserva {
+    border-top: 2px solid #edf2f7;
+    padding-top: 20px;
+}
+
+.formulario-reserva h2 {
+    color: var(--azul-secundario);
+    font-size: 1.4rem;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 11px;
+    border: 1px solid var(--borde-suave);
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-size: 1rem;
+}
+
+.form-group input:focus {
+    border-color: var(--azul-secundario);
+    outline: none;
+}
