@@ -125,8 +125,8 @@ footer {
 /* ==========================================
    DISEÑO RESPONSIVE (CELULARES Y TABLETS)
    ========================================== */
+
 @media (max-width: 768px) {
-    /* Convierte el formulario de búsqueda en una sola columna */
     form[role="search"] {
         flex-direction: column;
         align-items: stretch;
@@ -143,10 +143,9 @@ footer {
         margin-top: 5px;
     }
 
-    /* Hace que la tabla se pueda deslizar hacia los lados sin romper la pantalla */
     table {
         display: block;
         overflow-x: auto;
-        white-space: nowrap; /* Evita que el texto de las celdas se aplaste */
+        white-space: nowrap;
     }
 }

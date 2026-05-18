@@ -54,17 +54,15 @@ footer {
    DISEÑO RESPONSIVE (CELULARES Y TABLETS)
    ========================================== */
 @media (max-width: 768px) {
-    /* Reduce los márgenes y paddings para pantallas pequeñas */
     main, body > header {
         margin: 15px;
         padding: 20px 15px;
     }
 
     body > header h1 {
-        font-size: 1.8rem; /* Títulos un poco más pequeños */
+        font-size: 1.8rem;
     }
     
-    /* Para los botones dobles en contacto.html (Enviar / Limpiar) */
     button[type="submit"], button[type="reset"] {
         width: 100%;
         margin-left: 0;

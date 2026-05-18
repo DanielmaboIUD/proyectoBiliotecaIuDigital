@@ -60,17 +60,17 @@
    ========================================== */
 @media (max-width: 768px) {
     #contenedor-menu nav ul {
-        flex-direction: column; /* Apila los botones uno debajo de otro */
+        flex-direction: column;
         align-items: stretch;
         gap: 5px;
     }
     
     #contenedor-menu nav ul li a {
-        display: block; /* Hace que el botón ocupe todo el ancho */
+        display: block;
         padding: 12px;
     }
     
     #contenedor-menu h1 {
-        font-size: 1.3rem; /* Achica un poco el título principal */
+        font-size: 1.3rem;
     }
 }
