@@ -121,3 +121,32 @@ footer {
     background-color: #e2e8f0;
     color: var(--texto-oscuro);
 }
+
+/* ==========================================
+   DISEÑO RESPONSIVE (CELULARES Y TABLETS)
+   ========================================== */
+@media (max-width: 768px) {
+    /* Convierte el formulario de búsqueda en una sola columna */
+    form[role="search"] {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+    }
+    
+    form[role="search"] input, form[role="search"] select {
+        margin-right: 0;
+        width: 100%;
+    }
+    
+    form[role="search"] button {
+        width: 100%;
+        margin-top: 5px;
+    }
+
+    /* Hace que la tabla se pueda deslizar hacia los lados sin romper la pantalla */
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap; /* Evita que el texto de las celdas se aplaste */
+    }
+}
