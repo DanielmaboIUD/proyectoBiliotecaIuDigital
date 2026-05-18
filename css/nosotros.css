@@ -13,7 +13,7 @@ body {
     margin: 0;
 }
 
-header {
+body > header {
     max-width: 800px;
     margin: 60px auto;
     padding: 40px;
@@ -23,14 +23,14 @@ header {
     border-left: 6px solid var(--azul-primario);
 }
 
-header h1 {
+body > header h1 {
     color: var(--azul-primario);
     font-size: 2.5rem;
     margin-top: 0;
 }
 
 /* El texto de la misión/visión transformado en manifiesto */
-header p {
+body > header p {
     font-size: 1.25rem;
     color: #4a5568;
     line-height: 1.9;

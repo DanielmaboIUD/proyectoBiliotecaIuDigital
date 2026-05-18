@@ -15,7 +15,7 @@ body {
 }
 
 /* Contenedor adaptado a la estructura del archivo */
-header {
+body > header {
     max-width: 700px;
     margin: 40px auto;
     padding: 30px;
@@ -24,12 +24,12 @@ header {
     box-shadow: 0 4px 8px rgba(0,0,0,0.05);
 }
 
-header h1 {
+body > header h1 {
     color: var(--azul-primario);
     margin-top: 0;
 }
 
-header p {
+body > header p {
     color: #718096;
     margin-bottom: 25px;
 }
