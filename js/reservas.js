@@ -4,19 +4,18 @@ document.addEventListener('DOMContentLoaded', () => {
     const mensajeModal = document.getElementById('mensajeModal');
     const btnCerrarModal = document.getElementById('btnCerrarModal');
 
-    // Revisamos si hay datos guardados en la memoria del navegador
+    // Revisamos si hay datos guardados
     const tituloGuardado = localStorage.getItem('libroTemporal_titulo');
     const autorGuardado = localStorage.getItem('libroTemporal_autor');
     const formatoGuardado = localStorage.getItem('libroTemporal_formato');
 
-    // Si encontramos un título guardado, llenamos las cajas de texto
+    // Llenamos las cajas de texto
     if (tituloGuardado) {
         document.getElementById('tituloMaterial').value = tituloGuardado;
         document.getElementById('autorMaterial').value = autorGuardado;
         document.getElementById('formatoMaterial').value = formatoGuardado;
 
-        // Limpiamos la memoria para que si entra a reservas desde el menú después, 
-        // el formulario esté vacío
+        // Limpiamos la memoria
         localStorage.removeItem('libroTemporal_titulo');
         localStorage.removeItem('libroTemporal_autor');
         localStorage.removeItem('libroTemporal_formato');

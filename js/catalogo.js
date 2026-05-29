@@ -20,32 +20,32 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Seleccionamos todos los botones dentro de la tabla
+    // Seleccionamos todos los botones
     const botonesTabla = document.querySelectorAll('tbody button');
 
     botonesTabla.forEach(boton => {
         boton.addEventListener('click', (e) => {
-            // Buscamos la fila a la que pertenece el botón que le dio click
+            // Buscamos la fila
             const fila = e.target.closest('tr');
 
-            // Extraemos los textos de las columnas de esa fila específica
+            // Extraemos los textos de las columnas
            
             const titulo = fila.querySelectorAll('td')[1].textContent.trim();
             const autor = fila.querySelectorAll('td')[2].textContent.trim();
             const formatoTexto = fila.querySelectorAll('td')[3].textContent.trim();
 
-            // Guardamos esta información en la memoria del navegador
+            // Guardamos esta información
             localStorage.setItem('libroTemporal_titulo', titulo);
             localStorage.setItem('libroTemporal_autor', autor);
             
-            // Verificamos si es físico o digital para que coincida con el formulario
+            // Verificamos si es físico o digital
             if (formatoTexto.includes('Físico')) {
                 localStorage.setItem('libroTemporal_formato', 'Físico');
             } else {
                 localStorage.setItem('libroTemporal_formato', 'Digital');
             }
 
-            // Redirigimos al usuario a la página de reservas
+            // Redirigimos al usuario
             window.location.href = 'reservas.html';
         });
     });
