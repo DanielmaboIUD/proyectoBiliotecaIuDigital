@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/reservas.css">
-    <title>Reservas_Biblioteca iu Digital de antioquia</title>
+    <title>Reservas - Biblioteca IU Digital de Antioquia</title>
 </head>
 <body>
 
@@ -12,26 +12,82 @@
 
     <header> 
         <h1>Reservas</h1>
-
-        <p> En este espacio podras reservar los libros digitales</p>
+        <p>En este espacio podrás solicitar la reserva de libros físicos y recursos digitales.</p>
         
         <div class="formulario-reserva">
-            <h2> Nueva Reserva</h2>
+            <h2>Nueva Reserva</h2>
             <form id="formReserva">
-                <div class="form-group">
-                    <label for="nombreUsuario">Nombre completo</label>
-                    <input type="text" id="nombreUsuario" required placeholder="Ej: Juan Pérez">
-                </div>
+                
+                <fieldset style="border: 1px solid #dcdde1; border-radius: 8px; padding: 20px; margin-bottom: 25px; background-color: #fafafa;">
+                    <legend style="color: var(--azul-primario); font-weight: bold; font-size: 1.1rem; padding: 0 10px;">Datos del Usuario</legend>
+                    
+                    <div class="form-group">
+                        <label for="nombreUsuario">Nombre completo:</label>
+                        <input type="text" id="nombreUsuario" required placeholder="Ej: Juan Pérez">
+                    </div>
+
+                    <div class="form-group" style="margin-top: 15px;">
+                        <label for="correoUsuario">Correo institucional:</label>
+                        <input type="email" id="correoUsuario" required placeholder="Ej: juan.perez@iudigital.edu.co" style="width: 100%; padding: 11px; border: 1px solid var(--borde-suave, #dcdde1); border-radius: 6px; box-sizing: border-box; font-size: 1rem;">
+                    </div>
+
+                    <div class="form-group" style="margin-top: 15px;">
+                        <label for="tipoUsuario">Tipo de usuario:</label>
+                        <select id="tipoUsuario" required style="width: 100%; padding: 11px; border: 1px solid var(--borde-suave, #dcdde1); border-radius: 6px; box-sizing: border-box; font-size: 1rem; font-family: inherit;">
+                            <option value="">Seleccione una opción...</option>
+                            <option value="estudiante">Estudiante</option>
+                            <option value="profesor">Profesor</option>
+                            <option value="administrativo">Administrativo</option>
+                        </select>
+                    </div>
+                </fieldset>
+
+                <fieldset style="border: 1px solid #dcdde1; border-radius: 8px; padding: 20px; margin-bottom: 25px; background-color: #fafafa;">
+                    <legend style="color: var(--azul-primario); font-weight: bold; font-size: 1.1rem; padding: 0 10px;">Datos del Material</legend>
+
+                    <div class="form-group">
+                        <label for="tituloMaterial">Título del libro o recurso:</label>
+                        <input type="text" id="tituloMaterial" required placeholder="Ej: Cálculo Trascendentes Tempranas">
+                    </div>
+
+                    <div class="form-group" style="margin-top: 15px;">
+                        <label for="autorMaterial">Autor (Opcional):</label>
+                        <input type="text" id="autorMaterial" placeholder="Ej: James Stewart" style="width: 100%; padding: 11px; border: 1px solid var(--borde-suave, #dcdde1); border-radius: 6px; box-sizing: border-box; font-size: 1rem;">
+                    </div>
+
+                    <div class="form-group" style="margin-top: 15px;">
+                        <label for="formatoMaterial">Formato requerido:</label>
+                        <select id="formatoMaterial" required style="width: 100%; padding: 11px; border: 1px solid var(--borde-suave, #dcdde1); border-radius: 6px; box-sizing: border-box; font-size: 1rem; font-family: inherit;">
+                            <option value="">Seleccione un formato...</option>
+                            <option value="Físico">Libro Físico (Para recoger en campus)</option>
+                            <option value="Digital">Licencia Digital</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group" style="margin-top: 15px;">
+                        <label for="fechaReserva">Fecha en la que necesita el recurso:</label>
+                        <input type="date" id="fechaReserva" required style="width: 100%; padding: 11px; border: 1px solid var(--borde-suave, #dcdde1); border-radius: 6px; box-sizing: border-box; font-size: 1rem; font-family: inherit;">
+                    </div>
+                </fieldset>
+
+                <button type="submit" style="width: 100%; font-size: 1.1rem; padding: 12px; margin-top: 10px;">Confirmar Reserva</button>
+            </form>
+        </div>
     </header>
 
+    <dialog id="modalConfirmacion" style="border: none; border-radius: 8px; padding: 25px; box-shadow: 0 4px 10px rgba(0,0,0,0.2); max-width: 450px; text-align: center;">
+        <h3 style="color: #002855; margin-top: 0;">¡Reserva Exitosa!</h3>
+        <p id="mensajeModal" style="line-height: 1.6; color: #2c3e50;"></p>
+        <button id="btnCerrarModal" type="button" style="margin-top: 20px; width: 100%;">Cerrar y Volver</button>
+    </dialog>
+
     <script>
-        fetch('menuNav.html')
+        fetch('../menuNav.html')
             .then(response => response.text())
             .then(data => {
                 document.getElementById('contenedor-menu').innerHTML = data;
             });
     </script>
-
+    <script src="/js/reservas.js"></script>
 </body>
-
 </html>
